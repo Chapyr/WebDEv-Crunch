@@ -4,7 +4,7 @@
           <a href="/"><img src="@/components/img/logo.jpg" class="brand-logo" alt=""></a>
           <div class="nav-items">
             <div class="nav-item">
-              <router-link to="/read">
+              <router-link to="/login">
                 <img src="@/components/img/profil.webp" alt="">
               </router-link>
               <router-link to="/cart">
