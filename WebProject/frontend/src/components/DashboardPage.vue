@@ -13,7 +13,23 @@
 </template>
 <script>
 export default {
-  name: 'DashboardPage',
+    name: 'DashboardPage',
+    data() {
+        return {
+            userId: '', // Initialize userId to an empty string
+        };
+    },
+    created() {
+        // Get the token from local storage
+        const token = localStorage.getItem('token');
+        if (token) {
+            // Decode the token to extract the id ?
+            const decoded = jwtDecode(token);
+            if (decoded) {
+                this.userId = decoded.userId; // Assuming 'userId' is the key in your JWT payload
+            }
+        }
+    },
 };
 </script>
 

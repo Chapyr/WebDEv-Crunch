@@ -68,6 +68,7 @@
 import '@/components/script.css';
 import axios from 'axios';
 export default {
+  name : 'Update',
     data() {return {
         customerId: null,newFname: '',newLname: '',newEmail: '',newAge: null,newnbAdress: null,newStreet : '',newZipCode: null,newCity: '',newCountry: '',updateSuccess: false,updateError: false,};
     },

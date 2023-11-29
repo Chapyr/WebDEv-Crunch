@@ -11,6 +11,8 @@ import Kids from '@/components/KidsProducts.vue';
 import Men from '@/components/MenProducts.vue';
 import Women from '@/components/WomenProducts.vue';
 import Cart from '@/components/CartPage.vue';
+import Addp from '@/components/AddProduct.vue';
+import NewProd from '@/components/NewproductPage.vue';
 
 
 const routes = [
@@ -19,13 +21,16 @@ const routes = [
     {path: '/register', name: 'Register',component: Register,},
     {path: '/delete', name: 'Delete',component: Delete,},
     {path: '/update', name: 'Update',component: Update,},
-    {path: '/read', name: 'Read',component: Read, meta: { requiresAuth: true }},
+    {path: '/read', name: 'CustomerPage',component: Read, meta: { requiresAuth: true }},
     {path: '/cart', name:'Cart', component: Cart, meta: { requiresAuth: true }},
     {path: '/product', name:'Product', component: Product},
     {path: '/kids', name:'Kids', component: Kids},
     {path: '/men', name:'Men', component: Men},
+    {path: '/addp', name:'Addp', component: Addp},
+    {path: '/newp', name:'NewProd', component: NewProd},
     {path: '/women', name:'Women', component: Women}];
 const router = createRouter({history: createWebHistory(),routes,});
+
 router.beforeEach((to, from, next) => {
     if (to.meta.requiresAuth) {
         const token = localStorage.getItem('token');

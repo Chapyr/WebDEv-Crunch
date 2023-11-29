@@ -5,7 +5,7 @@
       <img src="@/components/img/logo.jpg" class="brand-logo" alt=""></a>
       <div class="nav-items">
         <div class="nav-item">
-          <router-link to="/login">
+          <router-link to="/read">
             <img src="@/components/img/profil.webp" alt="">
           </router-link>
           <router-link to="/cart">
@@ -59,6 +59,7 @@
 <script>
 import '@/components/script.css';
 export default {
+  name: 'LoginPage',
   data() {
     return {
       email: '',
@@ -85,7 +86,11 @@ export default {
         if (response.status === 200) {
           // Connexion réussie
           // Vous pouvez rediriger vers la page principale ou effectuer d'autres actions
-          this.$router.push('/CustomerPage');
+
+          const { token } = await response.json(); // Extraire le jeton de la réponse
+          localStorage.setItem('token', token); // Enregistrer le jeton dans le stockage local
+
+          this.$router.push('/');
         } else {
           throw new Error('La connexion a échoué. Veuillez vérifier vos informations.');
         }

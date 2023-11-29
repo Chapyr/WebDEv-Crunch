@@ -4,7 +4,7 @@
         <img src="@/components/img/logo.jpg" class="brand-logo" alt="">
         <div class="nav-items">
           <div class="nav-item">
-            <router-link to="/read">
+            <router-link to="/login">
               <img src="@/components/img/profil.webp" alt="">
             </router-link>
             <router-link to="/cart">
@@ -58,79 +58,3 @@
       <p class="footer-credit">ShoeShop, Best Shoes online store</p>
     </footer>
 </template>
-<script>
-import '@/components/script.css';
-export default{
-  name: 'Home',
-};
-</script>
-<style scoped>
-.hero-section{
-  width: 97,5%;
-  height: calc(100vh - 120px);
-  background-image: url('@/components/img/magasin.webp');
-  background-size: cover;
-  background-position: center top ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-section .logo{
-  height: 150px;
-  display: block;
-  margin: auto;
-}
-
-.hero-section .sub-heading{
-  margin-top: 10px;
-  text-align: center;
-  color: #fff;
-  text-transform: capitalize;
-  font-size: 35px;
-  font-weight: 300;
-}
-.hero-section .-heading{
-  margin-top: 10px;
-  text-align: center;
-  color: #fff;
-  text-transform: capitalize;
-  font-size: 35px;
-  font-weight: 300;
-}
-
-.collection-container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: auto;
-  grid-row-gap: 40px;
-}
-
-.collection{
-  position: relative;
-}
-
-.collection img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.collection p{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: black;
-  font-size: 50px;
-  text-transform: capitalize;
-}
-
-.collection:nth-child(3){
-  grid-column: span 2;
-  margin-bottom: 10px;
-}
-
-
-</style>

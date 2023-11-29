@@ -5,7 +5,7 @@
       <a href="/"><img src="@/components/img/logo.jpg" class="brand-logo" alt=""></a>
       <div class="nav-items">
         <div class="nav-item">
-          <router-link to="/login">
+          <router-link to="/read">
             <img src="@/components/img/profil.webp" alt="">
           </router-link>
           <router-link to="/cart">
@@ -128,6 +128,7 @@ export default {
 import '@/components/script.css';
 
 export default {
+  name: 'Register',
   data() {
     return {
       email: '',
@@ -162,7 +163,6 @@ export default {
           if (response.status === 201) {
             // Inscription réussie
             console.log('User created successfully!');
-            this.$router.push('/login');      //redirige vers login - a enlever plus tard
 
             // Connexion automatique après l'inscription
             return fetch('http://localhost:3000/api/auth/login', {
@@ -173,16 +173,19 @@ export default {
                 password: this.password
               })
             }); 
+
           } else {
             throw new Error('Failed to create user. Please check your information.');
           }
         })
 
 
-        .then(response => {
+        .then(async response => {           //il FAUT que la réponse soit asynchrone pour utiliser le token avec await
           if (response.status === 200) {
             // Connexion réussie
             // Vous pouvez rediriger vers la page principale ou effectuer d'autres actions
+            const { token } = await response.json(); // Extraire le jeton de la réponse
+            localStorage.setItem('token', token); // Enregistrer le jeton dans le stockage local
             this.$router.push('/');
           } else {
             throw new Error('La connexion a échoué. Veuillez vérifier vos informations.');

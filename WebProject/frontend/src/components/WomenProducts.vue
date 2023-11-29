@@ -79,7 +79,10 @@
       </footer>
 </template>
 <script>
-
+import '@/components/script.css'
+export default{
+    name : 'WomenProducts'
+}
 </script>
 
 <style>
