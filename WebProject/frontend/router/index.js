@@ -39,6 +39,7 @@ router.beforeEach((to, from, next) => {
     } else {
         // Route does not require authentication, allow access
         next();
+        console.log('ok');
     }
 });
 export default router;

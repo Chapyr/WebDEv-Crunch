@@ -30,6 +30,12 @@
           </li>
       </ul>      
     </div>
+    <div>
+    <h1>User Details</h1>
+    <p>Email: {{ user.email }}</p>
+    <p>user: {{ user._id }}</p>
+    <!-- Other user details... -->
+  </div>
     <footer>
       <div class="footer-container">
         <img src="@/components/img/nike.jpg" alt="Nike" class="nike" style="width: 20%; height: auto; ">
@@ -48,24 +54,29 @@
 </template>
 <script>
 import '@/components/script.css';
-import axios from 'axios';
 export default {
-    name: 'CustomerPage',
-    data() {
-        return {
-            customers: [], // Initialize as an empty array
-        };
+  name: 'CustomerPage',
+  data() {
+    return {
+      user: null,
+    };
+  },
+  mounted() {
+    // Fetch user data when the component is mounted
+    this.fetchUser();
+  },
+  methods: {
+    async fetchUser() {
+      try {
+        // Get the user ID from the route parameter (assuming you're using Vue Router)
+        const userId = this.$route.params.id;
+
+        const response = await this.$axios.get(`http://localhost:3000/api/auth/users/${userId}`);
+        this.user = response.data;
+      } catch (error) {
+        console.error('Error fetching user:', error);
+      }
     },
-    mounted() {
-        // Make an Axios GET request to fetch customer data from your backend
-        axios.get('http://localhost:3000/read')
-        .then((response) => {
-            // Assign the entire array of customers to the 'customers' dataproperty
-            this.customers = response.data;
-        })
-        .catch((error) => {
-            console.error('Error fetching customers:', error);// Handle error as needed
-        });
-    },
-}
+  },
+};
 </script>

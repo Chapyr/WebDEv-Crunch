@@ -85,7 +85,7 @@ export default {
         if (response.status === 200) {
           // Connexion réussie
           // Vous pouvez rediriger vers la page principale ou effectuer d'autres actions
-          this.$router.push('/CustomerPage');
+          this.$router.push('/');
         } else {
           throw new Error('La connexion a échoué. Veuillez vérifier vos informations.');
         }
