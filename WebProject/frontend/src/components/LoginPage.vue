@@ -159,7 +159,7 @@ export default {
   transition: 2s;
 }
 .error-message {
-  color: red;
+  color: #fff;
   margin-top: 10px;
 }
 </style>
