@@ -5,15 +5,15 @@ const path = require('path');
 const stuffRoutes = require('./routes/stuff');
 const userRoutes = require('./routes/user');
 
-/*mongoose.connect('mongodb+srv://Chapyr:JJBApart5@cluster0.spc8om4.mongodb.net/?retryWrites=true&w=majority',
+/*mongoose.connect('mongodb+srv://louart003:<arpamico>@cluster0.iixndt4.mongodb.net/?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
-const app = express();
-*/
-mongoose.connect('mongodb+srv://Chapyr:JJBApart5@cluster0.spc8om4.mongodb.net/?retryWrites=true&w=majority',
+const app = express();*/
+
+mongoose.connect('mongodb+srv://louart003:<Arpamico13!>@cluster0.iixndt4.mongodb.net/?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))

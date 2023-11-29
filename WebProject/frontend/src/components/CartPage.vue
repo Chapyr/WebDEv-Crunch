@@ -24,9 +24,8 @@
   <div>
       <h1>Come see your informations!</h1>
     <div class="infos-container">
-      <a href="/add"><button type="submit" class="add-button">Add the product</button></a><br>
-      <a href="/delete"><button type="submit" class="delete-button">Delete the product</button></a><br>
-      <a href="/update"><button type="submit" class="update-button">Update the rpoduct</button></a>
+      <a href="/add"><button type="submit" class="add-button">Add in the bag</button></a><br>
+      <a href="/delete"><button type="submit" class="delete-button">Remove from the bag</button></a><br>
     </div>
   </div>
   <div class="log-out">

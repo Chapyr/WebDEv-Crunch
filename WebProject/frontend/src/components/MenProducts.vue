@@ -117,33 +117,33 @@ mounted() {
 }
 
 .image-slider1{
-    width: 440px ;
+    width: 540px ;
     height: 300px;
     position: relative;
-    background-image: url('@/components/img/adidas1.jpg');
+    background-image: url('@/components/img/adidas2.jpg');
     background-size: cover;
-    left: -100px;
+    left: -200px;
     margin-bottom: -50px;
 }
 .prod1{
-    margin-left:100px;
+    margin-left:50px;
 }
 .prod5{
-    margin-left: -400px;
+    margin-left: -600px;
 }
 .image-slider5{
     width: 540px ;
-    height: 400px;
+    height: 380px;
     position: relative;
-    background-image: url('@/components/img/asics2.jpg');
+    background-image: url('https://images.asics.com/is/image/asics/1011B012_410_SR_RT_GLB?$zoom$');
     background-size: cover;
-    left: -100px;
+    left: 00px;
     margin-bottom: -50px;
 }
 .product-info {
     max-width: 500px; /* Ajustez la largeur maximale selon vos besoins */
     text-align: center; /* Centrez le contenu horizontalement */
-    margin-right: -50px;
+    margin-right: 425px;
 }
 
 .product-info h1 {
@@ -186,7 +186,8 @@ mounted() {
 .product-info5 {
     max-width: 350px; /* Ajustez la largeur maximale selon vos besoins */
     text-align: center; /* Centrez le contenu horizontalement */
-    margin-top:50px;
+    margin-top: 50px;
+    margin-left: 100px;
 }
 
 .product-info5 h1 {

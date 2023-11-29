@@ -88,9 +88,10 @@
     grid-template-columns: repeat(2, 1fr);
     height: auto;
     grid-row-gap: 40px;
+    margin-left : -60px;
 }
 .prod2{
-    margin-left:200px;
+    margin-left:325px;
 }
 .prod4{
     margin-left: -50px;
@@ -139,6 +140,7 @@
     max-width: 550px; /* Ajustez la largeur maximale selon vos besoins */
     text-align: center; /* Centrez le contenu horizontalement */
     margin-top: 60px;
+    margin-left: 100px;
 }
 
 .product-info2 h1 {
@@ -154,7 +156,8 @@
 .product-info4 {
     max-width: 600px; /* Ajustez la largeur maximale selon vos besoins */
     text-align: center; /* Centrez le contenu horizontalement */
-    margin-top: 50px;
+    margin-top: 60px;
+    margin-left: 40px;
 }
 
 .product-info4 h1 {

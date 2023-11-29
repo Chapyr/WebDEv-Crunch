@@ -177,8 +177,9 @@ mounted() {
     justify-content: space-around; /* Ajustez selon vos besoins */
     margin-left: 1000px;
 }
-
+.prod1{}
 .second-products{
+    margin-top: 50px;
     display: flex;
     justify-content: space-around; /* Ajustez selon vos besoins */
     margin-left: 10px;
@@ -203,10 +204,14 @@ mounted() {
     position: relative;
     left: -500px; /* Ajustez cette valeur selon vos besoins */
     margin-right: -150px;
+    margin-left : 200px;
 }
 .prod3 {
     position: relative;
     left: -700px; /* Ajustez cette valeur selon vos besoins */
+}
+.prod4{
+    margin-left: -50px;
 }
 .product-details2{
     width: 100%;
@@ -243,21 +248,22 @@ mounted() {
 }
 
 .image-slider4{
-    width: 472px ;
-    height: 300px;
+    width: 550px ;
+    height: 350px;
     position: relative;
     background-image: url('@/components/img/vans1.jpg');
     background-size: cover;
     left: 100px;
     margin-bottom: -50px;
+    margin-right: -50px;
 }
 .image-slider5{
-    width: 440px ;
-    height: 300px;
+    width: 540px ;
+    height: 380px;
     position: relative;
-    background-image: url('@/components/img/asics1.jpg');
+    background-image: url('https://images.asics.com/is/image/asics/1011B012_410_SR_RT_GLB?$zoom$');
     background-size: cover;
-    left: -100px;
+    left: 00px;
     margin-bottom: -50px;
 }
 
@@ -317,6 +323,7 @@ mounted() {
     max-width: 550px; /* Ajustez la largeur maximale selon vos besoins */
     text-align: center; /* Centrez le contenu horizontalement */
     margin-top: 0px;
+    margin-left: 0px;
 }
 
 .product-info2 h1 {
@@ -348,7 +355,8 @@ mounted() {
 .product-info4 {
     max-width: 600px; /* Ajustez la largeur maximale selon vos besoins */
     text-align: center; /* Centrez le contenu horizontalement */
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-left: 200px;
 }
 
 .product-info4 h1 {
@@ -365,6 +373,7 @@ mounted() {
     max-width: 350px; /* Ajustez la largeur maximale selon vos besoins */
     text-align: center; /* Centrez le contenu horizontalement */
     margin-top:50px;
+    margin-left: 100px;
 }
 
 .product-info5 h1 {
