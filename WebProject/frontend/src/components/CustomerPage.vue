@@ -117,6 +117,7 @@ cursor: pointer;
 text-transform: uppercase;
 font-weight: bold;
 margin-left: 630px;
+text-decoration: none;
 }
 
 
