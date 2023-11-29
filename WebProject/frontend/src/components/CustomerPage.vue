@@ -24,9 +24,9 @@
   <div>
       <h1>Come see your informations!</h1>
     <div class="infos-container">
-      <a href="/add"><button type="submit" class="add-button">Add the product</button></a><br>
-      <a href="/delete"><button type="submit" class="delete-button">Delete the product</button></a><br>
-      <a href="/update"><button type="submit" class="update-button">Update the product</button></a>
+      <a href="/add"><button type="submit" class="add-button">Add the account</button></a><br>
+      <a href="/delete"><button type="submit" class="delete-button">Delete the account</button></a><br>
+      <a href="/update"><button type="submit" class="update-button">Update the account</button></a>
     </div>
   </div>
   <div class="log-out">

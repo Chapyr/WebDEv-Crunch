@@ -185,7 +185,7 @@ export default {
             // Vous pouvez rediriger vers la page principale ou effectuer d'autres actions
             this.$router.push('/');
           } else {
-            throw new Error('La connexion a échoué. Veuillez vérifier vos informations.');
+            throw new Error('Failed to create user. Please check your information.');
           }
         })
         .catch(error => {
@@ -255,7 +255,7 @@ export default {
 }
 
 .error-message {
-  color: red;
+  color: white;
   margin-top: 10px;
 }
 </style>

@@ -87,7 +87,7 @@ export default {
           // Vous pouvez rediriger vers la page principale ou effectuer d'autres actions
           this.$router.push('/CustomerPage');
         } else {
-          throw new Error('La connexion a échoué. Veuillez vérifier vos informations.');
+          throw new Error('Failed to connexion user. Please check your information.');
         }
       } catch (error) {
         this.error = error.message; // Afficher le message d'erreur
