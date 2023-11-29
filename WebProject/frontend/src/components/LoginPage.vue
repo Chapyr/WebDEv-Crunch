@@ -83,7 +83,8 @@ export default {
         });
 
         if (response.status === 200) {
-          // Connexion réussie
+          const { token } = await response.json();
+          localStorage.setItem('token', token);
           // Vous pouvez rediriger vers la page principale ou effectuer d'autres actions
           this.$router.push('/');
         } else {

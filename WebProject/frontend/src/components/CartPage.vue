@@ -51,26 +51,46 @@
 </template>
 <script>
 import '@/components/script.css';
-import axios from 'axios';
 export default {
-  name: 'CustomerPage',
   data() {
-      return {
-          customers: [], // Initialize as an empty array
-      };
+    return {
+      email: '',
+      password: '',
+      error: ''
+    };
   },
-  mounted() {
-      // Make an Axios GET request to fetch customer data from your backend
-      axios.get('http://localhost:4000/read')
-      .then((response) => {
-          // Assign the entire array of customers to the 'customers' dataproperty
-          this.customers = response.data;
-      })
-      .catch((error) => {
-          console.error('Error fetching customers:', error);// Handle error as needed
-      });
-  },
-}
+  methods: {
+    async display() {
+      this.error = ''; // Réinitialiser le message d'erreur
+
+      try {
+        const response = await fetch('http://localhost:3000/api/auth/:id', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+          
+          },
+          body: JSON.stringify({
+            email: this.email,
+            password: this.password
+          })
+        });
+
+        if (response.status === 200) {
+          const { token } = await response.json();
+          localStorage.setItem('token', token);
+          // Vous pouvez rediriger vers la page principale ou effectuer d'autres actions
+          this.$router.push('/');
+        } else {
+          throw new Error('La connexion a échoué. Veuillez vérifier vos informations.');
+        }
+      } catch (error) {
+        this.error = error.message; // Afficher le message d'erreur
+      }
+    }
+  }
+};
 </script>
 <style scoped>
 /* You can add styles for the table here if needed */

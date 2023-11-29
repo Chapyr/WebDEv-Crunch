@@ -179,9 +179,12 @@ export default {
         })
 
 
+
+
         .then(response => {
           if (response.status === 200) {
-            // Connexion réussie
+            const { token } = response.json();
+            localStorage.setItem('token', token);
             // Vous pouvez rediriger vers la page principale ou effectuer d'autres actions
             this.$router.push('/');
           } else {
